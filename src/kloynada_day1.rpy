@@ -1,417 +1,4 @@
-# Mod developing was started 03-14-2023
-
-#
-# THE START OF THE PROLOG
-#
-
-# The start of the game
-label start_Everlasting_Kloynada:
-    
-    jump prologdenis1
-
-label prologdenis1:
-
-
-
-    $ save_name = ('Пролог')
-    $ prolog_time()
-    # $ persistent.sprite_time = "day"
-    window hide
-    show khata
-    show prologue_dream
-    # show prolog_text at center_text
-    pause 5
-    # hide prolog_text with fade
-    window show
-    $ day_time()
-    $ persistent.sprite_time = "day"
-    hide prologue_dream with fade
-    show unblink with dissolve
-    play ambience ambience_camp_center_day fadein 0.5
-    scene khata with fade2
-    "Я проснулся."
-    "На часах 13:20"
-    th "Чёт я рано сегодня"
-    "Чёрт, как душно, нужно закрыть окно."
-    scene basgolova with dissolve
-    "За окном стоял постоянно один и тот же вид, который уже начал нагнетать. "
-    "На улице щебечут птицы. Как они меня уже достали."
-    "Справа росла вкусненькая клубника, и лишь один бассейн, с которым у меня связано много положительных воспоминаний, заставил улыбнуться."
-    play sound condition_sound_on
-    play sound_loop condition_sound fadeout 1.0
-    "Я включил сплит систему."
-    th "Вот так-то лучше!"
-    scene khata with dissolve
-    "Я пошёл умываться."
-    scene vanna11 with dissolve
-    stop ambience fadeout 0.5
-    "Да, я умываюсь прямо в ванной. И что теперь?"
-    play sound sfx_water_sink_stream
-    "Я открыл кран"
-    "Конечно мне не нравится умываться и зубы там чистить. Я же теряю время для игры в доту."
-    th "Ну ладно, зато буду чистым."
-    stop sound
-    "Я закрыл кран. Теперь я полон энергии для игры в доту."
-    play ambience ambience_camp_center_day fadein 0.5
-    scene khata with dissolve
-    "Так, вон комп. Я его с предыдущей ночи еще не выключил"
-    "Я сразу же зашёл на свой любимый сервер в дискордике."
-    stop ambience fadeout 0.5
-    scene discord with dissolve
-    play sound join_discord
-    play music music_list["gentle_predator"] fadein 1
-    dn "Дарова, лахи!"
-    ml "ПРИВЕТ, ДЕНИС!"
-    kl "АЛЁ?"
-    k4 "ООО, ПОДСОСЫ ДЕНИСА ОТКЛИКНУЛИСЬ."
-    vs "ПРИВЕТ..."
-    ml "ДЕНЧИК, ТЫ НЕ ЗАБЫЛ, ЧТО СЕГОДНЯ ТУРИК ПО ДОТЕ?"
-    dn "ЧЁ?{w} А, НЕТ КОНЕЧНО, КАК ТАКОЕ МОЖНО ЗАБЫТЬ?"
-    k4 "ГО ПОТРЕНИМСЯ, ГАЙС. ТОК ВИКА ИДЁТ К МЕЛЬНИКУ НА ЛИНИЮ, ДАЙТЕ НОРМ САППОРТА."
-    vs "ПАШЁЛ ТЫ…"
-    dn "НУ ЛАДНО ДАМ ВАМ ШАНС, ПОЙДЁМ ПАБЧИК СЫГРАЕМ"
-    "Конечно же , перед тем как пойти трениться я решил включить свою любимую музыку."
-    stop music fadeout 1.0
-    play sound join_discord
-    pause 1.0
-    play music lvvp
-    "Я прописал команду на включение моей любимой нексюши. Кайф для ушей."
-    th "Наконец-то послушаю ее, а то яндекс плюс закончился."
-    k4 "ОПАЧКИ, ВОТ ЭТО МУЗОН."
-    ml "ЧЁ ЗА ГОВНО? ОФНИ."
-    stop music
-    play sound disconnect_ds
-    "Так как у Саши даунича был \"диджей\", он прописал стоп. Пускай сосёт, музыка лучшая."
-    scene dota_opening with dissolve
-    pause 1.0
-    scene dota_menu_sf
-    play music music_list["gentle_predator"] fadein 1
-    "Я открыл доту и мы пошли трениться."
-    scene dota_training with dissolve
-    th "Эх , как же хочется пикнуть акса, пойти на сложную, и поняшиться с вражеским керри"
-    pause (1)
-    scene dota_menu_sf with dissolve
-    "Но, на время этого турнира я мидер, да и тройку отжать у кулича у меня ни была ни одного аута. Ой, один аут был, он же на керри."
-    "После двух игр оставалась 30 минут до турнира, мы приготовили двойные пики и морально готовились к играм."
-    scene dota_tournament_roshan with dissolve
-    "Прошло пару часов и вместе несколько игр, они были лёгкие, я даже начал считать себя лучшим мидером в мире. То есть, как я всегда и считал."
-    "Вот мы и вышли в гранд-финал, я был одновременно рад и шокирован: перед турниром я не думал о результате; я думал лишь о том, сколько сделает мельник фидов из 10."
-    "Особенно весёлым моментом мне показалось то, когда Мельник передайвил, и Никита порофлил."
-    k4 "Мельник опять фидит , может его уже забаним?!"
-    dn "Блин, первый нормальный колл за сегодня."
-    si "~ Хоть мельник фидит, у меня появлется шанс выиграть деньги. ~"
-    ml "Я БЫ УБИВАЛ ЕСЛИ БЫ МНЕ КРЕСТ ДАЛИ, СПАСИБО САППОРТАМ. НИКИТА ПРОСТО ДАУН, ДАЖЕ НА ТУРНИРЕ ТОКСИЧИШЬ."
-    "Говорил Александрия, сбавляя звук на каждом слове."
-    k4 "АЛО КОНЧЕНЫЙ! Ты понимаешь, что это шутки?"
-    "Кулич мгновенно успокоился."
-    vs "Как я могла дать крест, может хватит ссориться !"
-    kl "Не, мельник реально даун!"
-    "Дальше всё было, как во сне. Смешных рофлов больше не было . Да и мы всё же на турнире, кенты не стали долго обсуждать, кто самый конченый(это и так очевидно). "
-    show basgolova_bw with dissolve
-    show prologue_dream
-    "Во время игры мне почему-то часто вспоминался тот вид из окна, мне казалось это странным, но эмоций особо не было."
-    "В моём  \"Brain\" как будто произошёл тайм-скип ."
-    hide basgolova_bw
-    hide prologue_dream
-    dn "Думаю, их пик сильнее в лейте."
-    ml "Согласен, надо побыстрее заканчивать."
-    k4 "На скорострелычах!"
-    "Захихикал Кайлич."
-    "В этот момент я представил эхидную улыбку на лице \"Лучшей тройки\". Думаю, не стоит пытаться над ним рофлить. Хоть Никиту вывести трудно, но возможно, а если он будет на дизморали, выиграть будет невозможно . Даже трясущиеся руки Мельника не спасут."
-    kl "Нам действительно надо что-то делать!"
-    th "Спасибо, кэп."
-    k4 "Кулич: Можем пойти на авантюрного рошана , но желательно поставить варды."
-    kl "Где обсы пятёрка, почему они все в нашем лесу ?"
-    ml "Давайте смоканемся !"
-    vs "Смока нет …"
-    k4 "мля... Почему нет смоков ни в таверне , ни у вас в бэкпаке , а , Вика?!"
-    th "Пригорел Никита."
-    vs "Я варды ставила…"
-    th "Фейспалм..."
-    si "Вам не надо тянуть, идите уже на рошу ."
-    "Я думаю, все поняли байт \"Псевдо-интеллектуала\" . Было ясно , что он надеется на массовый фид под рошаном ."
-    "Он действительно был не обязан болеть за нас , ведь поспорил с каждым на большие деньги. Но сидеть в дс и байтить друзей в надежде на слив, это слишком. Впрочем, тогда у меня не было времени думать о его словах."
-    "Крики мельника вернули меня в реальность."
-    ml "Я ФИЖУУУ, ХЕЛП, ПОЧЕМУ СУ.., ПОЧЕМУ МНЕ НИКТО НЕ МОЖЕТ ПОМОЧЬ?"
-    dn "Хватит умирать в соло, даунич!"
-    "У меня в тот момент действительно бомбануло. Тут же начался файт ."
-    play sound disconnect_ds
-    stop music fadeout 1.0
-    "Но вдруг \"чпок\" и я оказываюсь в главном меню, и слышу звук выхода из дс ."
-    scene dota_menu_sf with dissolve
-    dn "Ебуч... сраный интернет !"
-    th "Надеюсь все поняли, что произошло и сразу поставили паузу. У меня где-то 4 минуты."
-    scene khata with dissolve
-    "Обычно в такой ситуации я просто надеюсь на силу Рандома. Но в этот раз я сильно волновался, и сразу начал переподключать Wi-Fi роутер."
-    "От этого увлекательного занятия меня отвёл телефонный звонок."
-    play sound_loop bumer_sound fadein 0.5
-    th "Найс тайминг, блин."
-    # scene phone_call_from_si
-    "Увидев то, что мне звонит Славик, я сразу ответил, но… он сказал совсем не то, что я ожидал услышать."
-    stop sound_loop fadeout 0.5
-    scene khata with dissolve
-    play music music_list["no_tresspassing"] fadein 1.0
-    si "Слушай, тут такое дело."
-    dn "Я здесь, у меня инет вырубил, щас зайду."
-    "Я уже собирался сбросить, но Слава сказал :"
-    si "Стой! Мне нужно поговорить с тобой один на один."
-    "После этой фразы я увидел, как на роутере горит лампочка , означающая наличие интернета . Я уже хотел сбросить звонок , как я обычно делаю с Мельником, но Славик заставил отнять минуту моей жизни ."
-    si "Ты отлично знаешь, что мы поспорили на деньги, но если ты не зайдёшь, я дам тебе больше, чем ты получишь за 1 место ."
-    dn "Хах. Ты думаешь, денег будет достаточно ? Меня можно купить ? Ты идиот ?"
-    si "Помнишь тот ДС-сервер на котором я админ и который мы хотели бахнуть, если ты сейчас поможешь мне, я отплачу тебе тем же, думаю, ты понимаешь о чём я."
-    "Предложение Славы звучало привлекательно. Мне как раз нужны деньги, заполучив их, я бы смог избавиться от overwolf, но друзей кидать я не хочу. Хотя… рейд сервера - развлечение для всех. Но и, наверное, тильт от поражения на турнире…"
-    dn "Секунду, дай подумать."
-
-    menu:
-        "Зайти в дискорд и доиграть турнир и после него рассказать о \"проишествии\" со Славой":
-
-            $ si_score -= 3
-            $ ml_score += 1
-            $ k4_score += 1
-            $ vs_score += 1
-            $ dn_score += 1
-            $ kl_score += 1
-            $ ms_score += 1
-
-            jump si_say_no1
-
-        "Продолжить играть турнир, но не говорить о звонке.":
-
-            jump si_dont_say1
-
-        "Послушать Славу, получить деньги и долгожданный рейд сервера.":
-
-            $ si_score += 3
-            $ ml_score -= 1
-            $ k4_score -= 1
-            $ vs_score -= 1
-            $ dn_score -= 1
-            $ kl_score -= 1
-            $ ms_score -= 1
-
-            jump si_say_yes1
-
-label si_say_no1:
-
-    "Подумав несколько секунд, я невероятно разозлился. Человек, которого я хоть чуть уважал и считал другом, заставляет меня кинуть других друзей за бабки и \"бах\"?"
-    "Нет уж, увольте! Если мне захочется бахнуть сервер, я приду в деревню, либо к опытной львице Лере."
-    th "В Серове все дауны?"
-    dn "Я не ожидал от тебя такого, и теперь с радостью забаню тебя на клоунаде!"
-    si "Ну мен… ты же понимаешь, я не хочу проигрывать такую сумму. В общем, человек такое существо, которому…"
-    "Я не дослушал эту крысу, и резко перебил его."
-    dn "Я уже захожу в дс, и поверь, сейчас я всем расскажу, какой ты конченый на самом деле."
-    si "Дай я попытаюсь тебе объяснить, не сбрасывай.., ненадо … , почему ты, ты такой..."
-    # play sound stop_callsi
-    stop music fadeout 2.0
-    "Я не стал продолжать диалог и сразу сбросил вызов. Дискорд как обычно загружался недолго, но за это время я на 100 процентов понял , что обязан рассказать о поступке Славы."
-    play music music_list["two_glasses_of_melancholy"] fadein 1.0
-    th "Такая тварь не должна обитать на клоунаде."
-    "И вот я подключаюсь к звонку."
-    play sound join_discord
-    scene discord with dissolve
-    ml "Слава богу ты живой!"
-    "Эта \"Слава\" меня затригеррило."
-    k4 "Ты уже в тильте?"
-    kl "Давай заходи, балбес, одна пауза блин осталась!"
-    scene dota_opening with dissolve
-    dn "Ха… Мне сейчас звонил один рофлочелик и просил вас кинуть, что скажете..."
-    ms "Это кто был? Мельник?"
-    k4 "Было ожидаемо, вряд ли кто-то захочет сливать такие деньги."
-    ml "Это что... Серьёзно Славик?"
-    ml "Чел ты реально конченый, я рад что Денис оказался умнее тебя, Можешь со мной больше не общаться"
-    kl "Не я с этим дауном и так не хотел общатся, а теперь… ещё и в рот ему хочется насрать."
-    "В голосах всех кроме Максима чувствовалось желания натоксичить на Орловского, Вероника промолчала… \"Ничего нового\" . Я бы и сам высказал говнорю пару ласковых, но подумав я сказал следующее."
-    dn "После нашего выигрыша предлагаю устроить кое-какое голосование."
-    si "Ну я же объяснил, зачем, человек такое существо, каждый хочет выгоды, ты сам поступил как крыса, смысл, смысл банить меня."
-    "Я не хотел его слушать, был зол на него, исходя из этого я его сразу замутил."
-    # scene dota_menu_reconnect
-    ml "Хорош! Он не имеет право здесь говорить."
-    k4 "Слава, ну что ж ты, фраер, интеллект не заюзал…"
-    # scene dota_tournament
-    "Я зашёл на последнем тайм-ауте , мы выиграли драку из-за большого преимущества в нетворсе , забрали аегис , а за тем и вражеский трон."
-    "За этот промежуток времени ничего интересного в игре не произошло, все говорили только по инфе, дебилоид сидел в муте."
-    stop music fadeout 0.5
-    play music music_list["so_good_to_be_careless"] fadein 1.0
-    # scene desktop_23_35 with dissolve
-    "Я посмотрел на часы — 23:35."
-    th "Неужели Мельнику разрешили так долго играть, как он смог отпроситься?"
-    "Победа! +20000 тысяч осколков на моём балансе!"
-    # scene dota_win_20k
-    ml "Повезло, что у меня уехали родители."
-    scene dota_menu_sf with dissolve
-    dn "Найс тайминг, только об этом подумал"
-    ml "У меня скоро родители приедут, всем спасибо за игру."
-    play sound disconnect_ds
-    scene discord with dissolve
-    kl "Иди проспись."
-    ms "Спокойной ночи чучело и все нормальные люди, я тоже спать."
-    play sound disconnect_ds
-    k4 "Отлично сыграли , а теперь по кроваткам, гейс."
-    play sound disconnect_ds
-    vs "Всем споки."
-    play sound disconnect_ds
-    "Слава, хотя нет, Орловский просто вышел из ДС, про него похоже все забыли. Ладно проведём голосование позже. В дискорде остался только я. Что ж, титан одиночества - титан навсегда!"
-    play sound disconnect_ds
-    scene khata with dissolve
-    play sound_loop condition_sound fadein 1.0
-    th "Одному мне делать нечего, пойду лягу пораньше спать."
-    stop sound_loop fadeout 1.0
-    show blink
-
-
-    jump first_denis_day
-
-label si_dont_say1:
-
-    "Поразмыслив несколько секунд, я был в шоке, не думал то что Слава способен на такое."
-    th "Все друзья Мельника дауны."
-    "Сегодня я был в хорошем настроение и не хотел токсичить на кого-то или вводить друзей в тильт."
-    stop music fadeout 0.5
-    play music music_list["everyday_theme"] fadein 1.0 fadein 1
-    dn "Рофлочел ты понимаешь что ты у меня просишь ?"
-    si "Ты понимаешь, какие это деньги ?"
-    dn "Слушай, помогать я тебе не собираюсь, отдашь всем проигранные деньги тогда поговорим."
-    si "Ну мен... это шутка , рофл , прикол , понимаешь ?"
-    "Наверное после моих слов это даун представил как улетит с клоунады на \"Банановые острова\". По голосу я понял то что он хотел оправдаться "
-    "В любом случае я не хочу рассказывать о его поступке."
-    th "Зачем этим лохам настроение портить, пусть хоть турик на позитиве выиграют."
-    dn "Ладно… Бедолага, дам тебе шанс."
-    si "Н-ну я объясняю , я не всерьёз."
-    dn "Слушай не доводи меня, а то я тебе реально ЗАБАНЮ."
-    si "Спасибо конечно , но это всего…"
-    "Не дослушав Славу я отключился от звонка и зашёл в дс."
-    scene discord
-    play sound join_discord
-    ml "Здарова, Денис."
-    k4 "Жёстко тильтанул?"
-    kl "Что за бедолага зашёл?"
-    dn "Зашёл вас закерить, не надо?"
-    k4 "Пошёл нафег."
-    vs "У нас одна пауза осталась, ЗАХОДИ УЖЕ."
-    "Я сразу же зашёл в доту . Было немного не по себе от того что я скрывая разговор со славой , но об говорить я не собирался."
-    scene dota_opening with dissolve
-    pause (4)
-    # scene dota_menu_reconnect with dissolve
-    pause (3)
-    # scene dota_tournament with dissolve
-    th "Я же всё-таки не балабол."
-    "Но эти мысли не помешали мне закерить."
-
-    # scene desktop_23_35
-    "После окончания игры я посмотел на часы — 23:35"
-    # scene dota_win_20k
-    th "Не зря так долго играли, 20000 тысяч. СЮДАААААА?"
-    scene discord with dissolve
-    stop music fadeout 0.5
-    play music music_list["so_good_to_be_careless"] fadein 1.0
-    "Из моих размышлений меня выбили разговоры друзей и Мельника."
-    ml "Не, ну я закерил."
-    dn "Найс энигма тройка 10-17."
-    k4 "Зато какой импакт, 0 ошибок."
-    ml "Не импакт реально был."
-    dn "Ты про меня?"
-    ml "Про кулича."
-    kl "Мельник впервые не подсосал."
-    ml "Мда…"
-    k4 "Мда."
-    "Передразнил кулич."
-    "Игра была потная, мне захотелось спать."
-    dn "Спокойной ночи бедолаги."
-    k4 "Как-то рано сегодня."
-    th "Не то слово."
-    # SLEEP
-    scene khata with dissolve
-    pause 1.0
-
-    show blink
-    "Не думаю что без меня долго сидели в дс. В это время все кроме меня спят. Я сразу отправился в мир сновидений не успев об этом подумать."
-    ""
-
-    jump first_denis_day
-
-label si_say_yes1:
-
-    dn "Кидать друзей… это по-даунски."
-    si "Ты же понимаешь сколько я могу тебе дать. Тысяч 25 где-то. Плюс… отличный рейдик."
-    "Желание лёгких денег и рейда пробирало насквозь. Я понимал, что это неправильно но всё же…"
-    dn "Ладно… Всё ради рейда!"
-    stop music fadeout 0.5
-    play music music_list["into_the_unknown"] fadein 1.0
-    si "Отлично, рад, что мы нашли общий язык."
-    dn "Но если ты меня обманешь, соболезную тебе. Ты сразу же вылетишь с клоунады."
-    si "Прям как Мельник в окно, какой байт? Думаю, ты сам понимаешь, какие это деньги"
-    dn "Ну, сливать специально я не собираюсь."
-    th "Я же не клоун, хорошо, что в той катке на дровке кулич заруинил. А шмотки на земеле сами сломались."
-    si "Фидить не нужно! Просто не заходи в доту и в дс где-то 10 минут, без мидера они не выиграют."
-    dn "Ладно, только первый и последний раз я кого-то кидаю."
-    si "Как скажешь!"
-    "Я всё сделал по заветам Вячеслава."
-    th "Чёрт, на что я вообще согласился? Я же и так при деньгах…"
-    "10 минут казались вечностью, плюс… {w} звонки от друзей, на которые я не отвечал.{w} Не отвечал из-за сделки. Сделки с Дьяволом. Ну, мне так казалось на тот момент."
-    "Или от стыда я не брал трубку, я даже для себе не определился, скорее всего всё вместе."
-    "Я посмотрел на часы."
-    th "Пора заходить."
-    stop music fadeout 0.5
-    "Звук подключения к звонку и крики в мою сторону."
-    play music music_list["you_won_t_let_me_down"] fadein 1.0
-
-    scene discord with dissolve
-    play sound join_discord
-    "Это было не удивительно."
-    th "Если бы Мельник так заруинил вряд ли он остался бы на клоунаде."
-    "Никогда не думал что меня будут обвинять на моём же сервере, впрочем я не пытался вслушиваться в эти разговоры, я сам понимал что чувствовали в тот момент мои друзья."
-    si "Я же говорил что у вас не получится выиграть."
-    "Вячеслав зловеще засмеялся."
-    si "Не спорьте, если не уверены в себе!"
-    k4 "Чел… Все были уверены в себе, ты реально думаешь мы бы слили 5в5? Не строй из себя дурачка, ты, вроде, умный."
-    "После этой фразы все утихли, тильт ребят только нарастал."
-    ml "Ещё и деньги этому дауну отдавать."
-    "Мне не хотелось оправдываться и ничего говорить."
-    dn "Извините… я же не виноват, что у меня оффнули интернет…"
-    kl "Не, ну просто чел заруинил."
-    k4 "Как всегда."
-    stop music fadeout 0.5
-    "Мне не хотелось сидеть в дискорде. Хотелось быстрее выйти со звонка."
-    # Change music.
-    play music music_list["smooth_machine"]fadein 1.0
-    dn "Наверное, пойду спать."
-    k4 "Как-то рано."
-    vs "Заруинил и уходит."
-    ms "Я считаю, мы из-за Мельника слили."
-    ml "Молча сиди, даун с 1 рекрутом."
-    k4 "Молча сиди, даун с 2 стражем."
-    ml "В отличие от него я керри на турике."
-    k4 "Не волнуйся, это твой последний турнир на керри."
-    ml "Ой, всё, заткнись, даун."
-    "Заплакал Александр."
-    "У меня не оставалось сил слушать нытьё своих друзей, потому что ныли они из-за меня. Так ещё конфликт двух корешей выбил всю мораль из меня."
-    th "Какой же я кидок…"
-    dn "Пойду я спать, простите ещё раз."
-    k4 "Ага, сладких снов. Я удаляю доту 2."
-    dn "Спокойной ночи. Ну как же обидно, господи!!! Ну почему Денис…"
-    "Кричал мельник издалека, пиная себя по голове."
-    kl "Спокойной, спасибо за руин."
-    play sound disconnect_ds
-    "Вика вышла, ничего не сказав."
-    ms "Дайте мне мид пж сыграть некст турнир, у меня интернет надёжный."
-    play sound disconnect_ds
-    # scene pc_desktop
-    scene khata with dissolve
-    "После этих слов я вышел с дискорда.{w} Чувствовал себя невероятно уставшим за сегодня. Было обидно за поражение на турнире, но конечно же это был не последний наш турик."
-    th "То ли ещё будет!"
-    stop sound_loop fadeout 1.0
-    show blink
-    "Я примкнул к объятиям Морфея."
-    ""
-
-    jump first_denis_day
-
-#
-#   THE START OF THE FIRST DAY
-#
-
-label first_denis_day:
-
+label kloynada_first_start:
     $ save_name = ('День 1')
     $ day_time()
     $ persistent.sprite_time = "day"
@@ -701,14 +288,15 @@ label first_denis_day:
         "Договориться с Леной":
             $ live_with_ml = True
             $ ml_score -= 2
-            jump first_day_dogovor_un
+            jump kloynada_first_day_un_branch
 
         "Дать шанс Мельнику":
             $ live_with_ml = False
             $ ml_score += 1
-            jump first_day_give_a_chance
+            jump kloynada_first_day_ml_branch
 
-label first_day_dogovor_un:
+
+label kloynada_first_day_un_branch:
 
     "Я всё-таки был настроен серьёзно, надо договориться с Леной.{w} Я понимал, что мельник будет против, но всё же мне нужно хоть что-то узнать об этом месте. И в перспективе даже я буду собеседником и сожителем интереснее, чем Лена. "
     th "Да и у мельника планов никаких не было, наверно."
@@ -806,9 +394,10 @@ label first_day_dogovor_un:
     scene melnik_house_outside_day
     "Я направился в сторону домика вожатой с целью доложить о выполнении миссии."
 
-    jump first_one_Day
+    jump kloynada_first_continuation_first
 
-label first_day_give_a_chance:
+
+label kloynada_first_day_ml_branch:
 
     "Я как всегда решил стать солистом и пожить одному. Я и так смогу многое узнать об этом месте, к тому же жить с Мельником."
     th "Я что, педик? Вроде нет."
@@ -832,9 +421,10 @@ label first_day_give_a_chance:
     stop music fadeout 0.5
     th "Надо бы дойти до домика вожатой и сообщить о том, что я нашёл себе домик."
     # !!!
-    jump first_one_Day
+    jump kloynada_first_continuation_first
 
-label first_one_Day:
+
+label kloynada_first_continuation_first:
     scene bg ext_houses_day with dissolve
     play ambience ambience_camp_center_day fadein 0.5
 
@@ -878,13 +468,14 @@ label first_one_Day:
     menu:
         "Согласиться":
             $ k4_score += 1
-            jump first_d_help_k4_square
+            jump kloynada_first_help_k4
 
         "Отказаться":
             $ k4_score -= 1
-            jump first_d_dont_help_k4
+            jump kloynada_first_dont_help_k4
 
-label first_d_help_k4_square:
+
+label kloynada_first_help_k4:
     stop music fadeout 0.5
     play music music_list["so_good_to_be_careless"] fadein 0.5
     dn "Ладно, давай метлу."
@@ -927,7 +518,7 @@ label first_d_help_k4_square:
     dn "Чего кровать не прибрал?"
     k4 "Есть дела поважнее, кровать подождёт."
     "Кулич направился к выходу, а я пошёл следом."
-    if live_with_ml == True:
+    if live_with_ml:
         scene melnik_house_outside_day with dissolve 
 
     else:
@@ -946,10 +537,10 @@ label first_d_help_k4_square:
     dn "То есть, он всегда был так близко… "
     th "И нафига я его брал в напарники..."
     k4 "Ага. Ладно я пойду, удачи! Помахал мне Никита и вскрылся в небытие."
-    jump first_Day_aidpost_kl
+    jump kloynada_first_aidpost
 
 
-label first_d_dont_help_k4:
+label kloynada_first_dont_help_k4:
 
     dn "Тебя попросили, ты и дежурь. И вообще, у меня дела есть. Мне к вожатой нужно."
     "Парировал я."
@@ -968,9 +559,10 @@ label first_d_dont_help_k4:
     th "По ощущениям кулич несильно обиделся или вовсе не обиделся. Так что я сделал всё правильно.{w} Наверное."
     scene bg ext_aidpost_day with dissolve
     "Следуя направлению, указанным Никитой, я быстро дошёл до здания с флагом-крестом."
-    jump first_Day_aidpost_kl
+    jump kloynada_first_aidpost
 
-label first_Day_aidpost_kl:
+
+label kloynada_first_aidpost:
     th "Сейчас из двери выйдет Адмирал."
     "Я с улыбкой зашёл внутрь."
     stop ambience
@@ -1071,22 +663,23 @@ label first_Day_aidpost_kl:
             $ si_score -= 2
             $ first_day_helped_kl = True
             $ first_day_tell_si = False
-            jump first_day_help_kl
+            jump kloynada_first_day_help_kl
 
         "Отказаться.":
             $ kl_score -= 1
             $ first_day_helped_kl =  False
             $ first_day_tell_si = False
-            jump first_day_say_no_kl
+            jump kloynada_first_dont_help_kl
 
         "Отказаться и рассказать Славику.":
             $ kl_score -= 1
             $ si_score += 1
             $ first_day_helped_kl = False
             $ first_day_tell_si = True
-            jump first_day_say_no_kl
+            jump kloynada_first_dont_help_kl
 
-label first_day_help_kl:
+
+label kloynada_first_day_help_kl:
 
     dn "Знаешь, Славу я тоже недолюбливаю, так что помогу тебе."
     kl "Недолюбливаешь?{w} Вы что, знакомы?"
@@ -1106,19 +699,19 @@ label first_day_help_kl:
     stop music fadeout 0.5
     # play music music_list["everuday_theme"] fadein 0.5
     kl "Нет!{w} Я сам придумал!"
-    jump first_day_stolovaya_kl
+    jump kloynada_first_dinner
 
 
-label first_day_say_no_kl:
+label kloynada_first_dont_help_kl:
     dn "Извини, но я хорошо знаком со Славиком, не хочу проворачивать такой подлый «трюк»."
     stop music fadeout 0.5
-    if first_day_tell_si == True:
+    if first_day_tell_si:
         th "Подлец должен быть наказан! Я расскажу все Славе!"
     kl "Но он же явно не прав?"
     dn "Возможно, но я хочу дружить и с тобой, и с ним вместе, не хочу, чтобы мои друзья были врагами. Попробуй объяснить про долг куличу."
     kl "Пробовал, он сказал ему главное наш долг, а не Славин, а помочь он слишком занят."
     dn "В любом случае, я не хочу вмешиваться в ваш круговорот долгов."
-    if first_day_tell_si == True:
+    if first_day_tell_si:
         th "Ладно, Кирилл нормальный пацан, но все равно, он крыса. Я расскажу его \"план\" Славе, но попрошу, что бы он не говорил, что слил Кирилла именно я."
     kl "Я думал хоть кто-то поможет…"
     "Вот он и начал давить на жалость, в моём мире он так не делал, наверное знал, что не прокатит. Я не хотел отказываться от своих слов ну и естественно портить отношения со Славой."
@@ -1127,10 +720,10 @@ label first_day_say_no_kl:
     kl "Ладно, я принимаю твою точку зрения, наверное, ты единственный, кто доходчиво мне объяснил."
     kl "В столовую скоро, не хочешь составить мне компанию?"
     dn "Ага, поесть я тоже хочу."
-    jump first_day_stolovaya_kl
+    jump kloynada_first_dinner
 
 
-label first_day_stolovaya_kl:
+label kloynada_first_dinner:
 
     # kl "В столовую скоро, не хочешь составить мне компанию?"
     # dn "Ага, поесть я тоже хочу."
@@ -1178,7 +771,7 @@ label first_day_stolovaya_kl:
     show us smile pioneer at center with ease
     "По дороге я обратил внимание на количество пионеров, оно так скажем было не очень большое, человек 50."
     "Большая часть моего внимания упала на девушек, по виду моего возраста."
-    if live_with_ml == True:
+    if live_with_ml:
         "Даже Лену увидел, она казалась более открытой чем во время нашего разговора, с кем-то весьма эмоционально разговаривала."
         "Всё же надо было дать шанс Мельнику."
 
@@ -1203,14 +796,15 @@ label first_day_stolovaya_kl:
     menu:
         "Отдать котлету.":
 
-            jump first_day_gift_beaf_kl
+            jump kloynada_first_give_beaf
 
         "Не отдавать котлету.":
 
             $ kl_score += 1
-            jump first_day_not_gift_beaf_kl
+            jump kloynada_first_dont_give_beaf
 
-label first_day_gift_beaf_kl:
+
+label kloynada_first_give_beaf:
     "Хоть мне и казалось это чересчур абсурдным и глупым, но я всё-таки был суеверным, да и Кирилла хотелось развеселить."
     dn "Ладно, жуй свой котлету, дружище!"
     kl "Ох, спасибо, друг!"
@@ -1231,9 +825,10 @@ label first_day_gift_beaf_kl:
     th "Конечно, в первую очередь хорошее впечатление создают пионерки, особенно Улька, но Кириллу говорить не хотелось, здесь все как в нашем мире, вопросов от него явно будет много."
     "Доев гарнир, уже без котлеты, я направился на выход."
     th "Первая ошибка в лагере. Надеюсь, последняя."
-    jump first_day_after_stolovaya_kl
+    jump kloynada_first_after_dinner
 
-label first_day_not_gift_beaf_kl:
+
+label kloynada_first_dont_give_beaf:
 
     th "Чё?{w} Он реально думал, что я на такое поведусь?{w} Да, мир другой, но интеллект у него не поменялся"
     dn "Ахаха, нет уж, прости, но будем становиться друзьями по-другому. Тем более, я сам по себе легенда, так что ни в какие байки не верю!"
@@ -1248,9 +843,10 @@ label first_day_not_gift_beaf_kl:
     kl "Дибил..."
     "Прошептал Кирилл."
 
-    jump first_day_after_stolovaya_kl
+    jump kloynada_first_after_dinner
 
-label first_day_after_stolovaya_kl:
+
+label kloynada_first_after_dinner:
 
     "С радостным настроением и полным желудком я отправился прочь из столовой."
     hide us with dissolve
@@ -1279,28 +875,30 @@ label first_day_after_stolovaya_kl:
     menu:
         "Пойти в гости.":
             $ kl_score += 1
-            jump first_day_go_to_kls_home
+            jump kloynada_first_goto_kl_home
 
         "Пройтись на север.":
             $ first_day_have_seen_slava = True
             $ first_day_have_seen_roma = False
             $ first_day_have_seen_maks = False
             $ kl_score -= 1
-            jump first_day_walk_around_sovenok_lk
+            jump kloynada_first_walk_around
 
         "Пройтись на запад.":
             $ first_day_have_seen_roma = True
             $ first_day_have_seen_slava = False
             $ first_day_have_seen_maks = False
             $ kl_score -= 1
-            jump first_day_walk_to_cybernetiks
+            jump kloynada_first_goto_cybernetics
         "Пройтись на юг.":
             $ first_day_have_seen_roma = False
             $ first_day_have_seen_slava = False
             $ first_day_have_seen_maks = True
             $ kl_score -= 1
-            jump first_day_south_walk
-label first_day_go_to_kls_home:
+            jump kloynada_first_south_walk
+
+
+label kloynada_first_goto_kl_home:
 
     dn "Думаю, будет неплохо сходить."
     hide us with dissolve
@@ -1385,15 +983,16 @@ label first_day_go_to_kls_home:
     kl "Ладно давай, дальше сам дойдёшь."
     dn "Ну давай, удачи"
     # ""
-    if live_with_ml == True:
+    if live_with_ml:
 
-        jump first_day_night_ml_sleep
+        jump kloynada_first_night_ml
 
     else:
 
-        jump first_day_night_wout_ml
+        jump kloynada_first_night_noml
 
-label first_day_walk_around_sovenok_lk:
+
+label kloynada_first_walk_around:
     dn "Прости, Кирюх, я лучше прогуляюсь по лагерю."
     kl "Хорошо. До завтра?"
     "У Кирилла на лице было разочарование."
@@ -1442,15 +1041,16 @@ label first_day_walk_around_sovenok_lk:
 
 
 
-    if live_with_ml == True:
+    if live_with_ml:
 
-        jump first_day_night_w_ml_si
+        jump kloynada_kloynada_first_night_ml_si
 
     else:
 
-        jump first_day_night_wout_ml_si
+        jump kloynada_first_night_noml_si
 
-label first_day_night_ml_sleep:
+
+label kloynada_first_night_ml:
     $ night_time()
     $ persistent.sprite_time = "night"
     scene ext_melnik_house_night with fade
@@ -1474,11 +1074,10 @@ label first_day_night_ml_sleep:
     "Но после такого заснуть было нелегко. Перед глазами у меня были воспоминания сегодняшнего дня.{w} Несмотря на столько событий и неимерное количество общения, я был рад, что попал в Совёнок."
     th "Может, меня направили сюда с какой-то целью?"
     # show blink with dissolve
-    jump second_denis_day
+    jump kloynada_second_start
 
 
-
-label first_day_walk_to_cybernetiks:
+label kloynada_first_goto_cybernetics:
     dn "Прости, Кирюх, я лучше прогуляюсь по лагерю."
     kl "Хорошо, до завтра?"
     "У Кирилла на лице было разочарование."
@@ -1526,12 +1125,14 @@ label first_day_walk_to_cybernetiks:
     menu:
         "Вступить в клуб кибернетиков":
             $ rm_score += 1
-            jump first_day_joincyberpedics
+            jump kloynada_first_join_cybernetics
 
         "Отказаться":
             $ rm_score -= 1
-            jump first_day_ignorecyberpedics
-label first_day_joincyberpedics:
+            jump kloynada_first_ignore_cybernetics
+
+
+label kloynada_first_join_cybernetics:
     dn "Я не против."
     "В своём мире меня не очень тянуло к Роме, потому что его тянуло к Косте, а он мне очень не очень. Но здесь его нет, почему бы и не подружиться с Ромой поближе?"
     hide sh
@@ -1557,11 +1158,12 @@ label first_day_joincyberpedics:
     play ambience ambience_camp_center_night fadein 0.5
     "Я пошёл к себе \"домой\"."
     if live_with_ml:
-        jump first_day_night_after_rm_wml
+        jump kloynada_first_night_cybenetics_noml
     else:
-        jump first_day_night_after_rm_woutml
+        jump kloynada_first_night_cybernetics_noml
 
-label first_day_ignorecyberpedics:
+
+label kloynada_first_ignore_cybernetics:
     "Я не хотел тратить своё время в лагере на \"кибернетику\". Рому конечно жалко, ведь он тут совсем один. Ладно, переживёт."
     dn "Слушай, в другой раз."
     "Рома ничего не сказав уставился в книгу."
@@ -1573,11 +1175,12 @@ label first_day_ignorecyberpedics:
     "В мою голову приходило много идей как извиниться перед Ромой, так как, было понятно что я его обидел."
     "Но желание выспаться взяло своё."
     if live_with_ml:
-        jump first_day_night_after_rm_wml
+        jump kloynada_first_night_cybenetics_noml
     else:
-        jump first_day_night_after_rm_woutml
+        jump kloynada_first_night_cybernetics_noml
 
-label first_day_night_after_rm_wml:
+
+label kloynada_first_night_cybenetics_noml:
     "Вечерний совёнок выглядел потрясно, жаль было не с кем поделиться своими впечатлениями, так как я жил с мельником. "
     scene ext_melnik_house_night with dissolve
     "Дом, мой милый дом!"
@@ -1590,9 +1193,10 @@ label first_day_night_after_rm_wml:
     stop music fadeout 0.5
     play music music_list["drown"] fadein 0.5
     "Заснуть не получалось из-за потока мыслей насчёт моего появления в лагере."
-    jump first_day_end_after_rm
+    jump kloynada_first_end_cybernetics
 
-label first_day_night_after_rm_woutml:
+
+label kloynada_first_night_cybernetics_noml:
     "Вечерний совёнок выглядел потрясно, жаль было не с кем поделиться своими впечатлениями, так как я жил один. "
     scene bg ext_house_of_un_night with dissolve
     "Дом, мой милый дом!"
@@ -1605,9 +1209,10 @@ label first_day_night_after_rm_woutml:
     stop music fadeout 0.5
     play music music_list["drown"] fadein 0.5
     "Заснуть не получалось из-за потока мыслей насчёт моего появления в лагере."
-    jump first_day_end_after_rm
+    jump kloynada_first_end_cybernetics
 
-label first_day_end_after_rm:
+
+label kloynada_first_end_cybernetics:
     th "Итак, что у нас есть.  Я попал в «Совёнок» вместе со своими друзьями, но меня никто не помнит, а друг с другом они уже знакомы."
     th "Будет ли моё поведение влиять на мою реальную жизнь, если я, конечно, вернусь туда?"
     "У меня пошли мурашки по телу. "
@@ -1674,19 +1279,16 @@ label first_day_end_after_rm:
         show unblink with dissolve
         th "Философия для чайников..."
     scene blink with dissolve
-    jump second_denis_day
+    jump kloynada_second_start
     
     
-
-
-label first_day_night_wout_ml:
+label kloynada_first_night_noml:
     $ night_time()
     $ persistent.sprite_time = "night"
-    jump second_denis_day
+    jump kloynada_second_start
 
 
-
-label first_day_night_w_ml_si:
+label kloynada_kloynada_first_night_ml_si:
     $ persistent.sprite_time = "night"
     $ night_time()
     "Через некоторое время я дошёл до своего нового \"Дома\"."
@@ -1726,12 +1328,14 @@ label first_day_night_w_ml_si:
     ml "Спокойной ночи, сосед…"
     show blink with dissolve
     hide ml
-    jump second_denis_day
+    jump kloynada_second_start
 
-label first_day_night_wout_ml_si:
-    jump second_denis_day
 
-label first_day_south_walk:
+label kloynada_first_night_noml_si:
+    jump kloynada_second_start
+
+
+label kloynada_first_south_walk:
     "Я решил пойти на юг."
     scene bg ext_beach_sunset with dissolve
     stop ambience fadeout 0.5
@@ -1783,479 +1387,3 @@ label first_day_south_walk:
     th "Дурак твой…"
     dn "Баз… Цени своего отца. Он говорит правильные вещи."
     "Не думал, что разговор с Максимом зайдёт в такую степь."
-
-
-#
-# THE START OF THE SECOND DAY
-#
-
-label second_denis_day:
-    $ backdrop = "days"
-    $ new_chapter(2,u"День второй")
-    $ save_name = "День 2"
-    $ renpy.block_rollback()
-    $ prolog_time()
-    $ persistent.sprite_time = "prolog"
-    play music music_list["a_promise_from_distant_days"] fadein 1.0
-    pause 2
-    hide blink
-    show unblink with dissolve
-    show cg psglgdhavelostbw with dissolve
-    show prologue_dream
-    th "Чёрт, где это я."
-    pause 1.0
-    show prologue_dream with fade
-    "Я огляделся по сторонам и увидел своих друзей в реальном мире, видел я их будто через камеры видеонаблюдения."
-    "Ребята играли в доту, все кроме меня."
-    show blink with dissolve
-    "Но мой сон так же неожиданно оборвался как и начался."
-
-    if live_with_ml == True and first_day_helped_kl == True:
-        jump second_day_morning_wml_hkl
-
-    elif live_with_ml == False and first_day_helped_kl == True:
-        jump second_day_morning_woutml_hkl
-
-    elif live_with_ml == True and first_day_helped_kl == False and first_day_tell_si == False:
-        jump second_day_morning_wml_nothkl
-
-    elif live_with_ml == False and first_day_helped_kl == False and first_day_tell_si == False:
-        jump second_day_morning_woutml_nothkl
-
-    elif live_with_ml == True and first_day_helped_kl == False and first_day_tell_si == True:
-        jump second_day_morning_wml_nothkl_tsl
-
-    elif live_with_ml == False and first_day_helped_kl == False and first_day_tell_si == True:
-        jump second_day_morning_wout_ml_nothkl_tsl
-
-label second_day_morning_wml_hkl:
-    return
-label second_day_morning_woutml_hkl:
-    return
-label second_day_morning_wml_nothkl:
-    stop music fadeout 0.5
-    show melnik_house_inside_day
-    show unblink with fade2
-    $ day_time()
-    $ persistent.sprite_time = "day"
-    "Я проснулся, посмотрев на часы висящие на противоположной стене, я снова лёг в попытках уснуть увидев 11:20, но через пару секунд мне пришло горькое понимание того что надо вставать, а ещё я проспал завтрак."
-    play music music_list["everyday_theme"] fadein 1.0
-    th "Мда к жизни в лагере я совсем не приспособлен."
-    "Радовали лишь две мысли:\n{w}Первая, это то, что я отказал Кириллу.\n{w}Второе, это то, что Мельник уже куда-то ушёл."
-    play sound sfx_bed_squeak1
-    th "Блин, и где моя зубная паста и щетка? Чем я буду зубы чистить?"
-    play sound sfx_open_door_2
-    scene melnik_house_outside_day with dissolve
-    show mt normal panama pioneer at center with dissolve
-    play ambience ambience_camp_center_day fadein 0.5
-    "Поднявшись с кровати, я оделся и направился на улицу подышать свежим воздухом, но едва я вышел из домика, тут же ко мне подошла вожатая."
-    "Ожидая того что меня отчитаю за мой долгий сон, я сделал серьёзное лицо."
-    mt "Денис, ты почему не был на завтраке, зарядке и даже на линейке? Я уж подумала ты заболел."
-    dn "Я думал, что здоровый сон никому не помешает."
-    mt "Это верно, но только вот просыпаться ты должен в 8, а не в двенадцатом часу."
-    dn "Я всё же первый день, больше так не буду."
-    mt "Удивительно то, что ты даже не услышал будильник."
-    hide mt
-    show mt smile panama pioneer
-    mt "Ладно нет смысла тебя отчитывать, иди к умывальнику, приведи себя в порядок. А потом в столовую, надейся что твою порцию не съели голодные пионеры."
-    dn "Ага. А у меня хоть будет зубная щётка и паста?"
-    mt "У тебя в тумбочке у кровати. И ещё ни какой зубной пасты, только порошок, он без всякой химии – полезнее."
-    "Мда… Я забыл в каком году нахожусь, слава богу она знала про зубную пасту, и то что эту самую пасту уже изобрели."
-    play sound sfx_open_door_1
-    scene melnik_house_inside_day with dissolve
-    stop ambience fadeout 0.5
-    "Я вновь зашёл в домик, нашёл ту самую тумбочку и средства гигиены."
-    th "Ага, это точно не бизнес класс"
-    "Подумал я посмотрев на щётку с порошком."
-    play sound sfx_drawer_rattle
-    "Конечно таких благ Советского союза я не застал, но всё же понимание как этим пользоваться у меня есть."
-    scene melnik_house_outside_day with dissolve
-    play sound sfx_open_door_2
-    jump second_day_morning_nothkl
-
-
-
-
-label second_day_morning_woutml_nothkl:
-
-    stop music fadeout 0.5
-    show int_house_of_un_day
-    show unblink with fade2
-    "Я проснулся, посмотрев на часы висящие на противоположной стене, я снова лёг в попытках уснуть увидев 11:20, но через пару секунд мне пришло горькое понимание того что надо вставать, а ещё я проспал завтрак."
-    play music music_list["everyday_theme"] fadein 1.0
-    th "Мда к жизни в лагере я совсем не приспособлен."
-    "Радовали лишь две мысли. {w}Первая, это то, что я отказал Кириллу. {w}Второе, это то, что Мельник уже куда-то ушёл."
-    play sound sfx_bed_squeak1
-    th "Блин, и где моя зубная паста и щетка? Чем я буду зубы чистить?"
-    play sound sfx_open_door_2
-    scene bg ext_house_of_un_day with dissolve
-    show mt normal panama pioneer at center with dissolve
-    play ambience ambience_camp_center_day fadein 0.5
-    "Поднявшись с кровати, я оделся и направился на улицу подышать свежим воздухом, но едва я вышел из домика, тут же ко мне подошла вожатая."
-    "Ожидая того что меня отчитаю за мой долгий сон, я сделал серьёзное лицо."
-    mt "Денис, ты почему не был на завтраке, зарядке и даже на линейке? Я уж подумала ты заболел."
-    dn "Я думал, что здоровый сон никому не помешает."
-    mt "Это верно, но только вот просыпаться ты должен в 8, а не в двенадцатом часу."
-    dn "Я всё же первый день, больше так не буду."
-    mt "Удивительно то, что ты даже не услышал будильник."
-    hide mt
-    show mt smile panama pioneer
-    mt "Ладно нет смысла тебя отчитывать, иди к умывальнику, приведи себя в порядок. А потом в столовую, надейся что твою порцию не съели голодные пионеры."
-    dn "Ага. А у меня хоть будет зубная щётка и паста?"
-    mt "У тебя в тумбочке у кровати. И ещё ни какой зубной пасты, только порошок, он без всякой химии – полезнее."
-    "Мда… Я забыл в каком году нахожусь, слава богу она знала про зубную пасту, и то что эту самую пасту уже изобрели."
-    play sound sfx_open_door_1
-    scene bg int_house_of_un_day with dissolve
-    stop ambience fadeout 0.5
-    "Я вновь зашёл в домик, нашёл ту самую тумбочку и средства гигиены."
-    th "Ага, это точно не бизнес класс"
-    "Подумал я посмотрев на щётку с порошком."
-    play sound sfx_drawer_rattle
-    "Конечно таких благ Советского союза я не застал, но всё же понимание как этим пользоваться у меня есть."
-    scene bg ext_house_of_un_day with dissolve
-    play sound sfx_open_door_2
-    jump second_day_morning_nothkl
-
-# 3rd
-label second_day_morning_wml_nothkl_tsl:
-    stop music fadeout 0.5
-    scene melnik_house_inside_day
-    show unblink with fade2
-    $ day_time()
-    "Я наконец проснулся, но вместо обычного пробуждения меня ждал стук в дверь, очень громкий стук в дверь."
-    play sound sfx_knock_door2
-    play music music_list["everyday_theme"] fadein 1.0
-    "Посмотрев на часы время было 07:45 или 07:55, от такого раннего пробуждение аж глаза слезились,  я едва поднялся с кровати, и поплёлся к двери под этот раздражающий стук, я не задумываясь открыл дверь и увидел силуэт лысой гниды."
-    scene melnik_house_outside_day with dissolve
-    show k4 normal pioneer with dspr
-    "Солнце настолько сильно обогревала Совёнок, что по ощущениям мои глаза едва не сгорели, я сделал пару шагов назад и сонными глазами посмотрел на этого ужасного, разбудившего меня человека."
-    th "Если это не кофе в постель, то я ему щас лицо сломаю."
-    dn "Ну и что тебе в такую рань надо."
-    k4 "Рань? Уже была зарядка, линейка через 10 минут."
-    dn "Ну одну линейку проспать не страшно."
-    "Я уже начал закрывать дверь, как вдруг кулич остановил её волосатой рукой."
-    k4 "Я не по этому поводу, нам с тобой надо будет серьёзно побеседовать, это нужно будет сделать на завтраке."
-    dn "А так сказать нельзя?"
-    k4 "Ты только проснулся, ничего адекватного я от тебя пока не ожидаю."
-    "Унизил меня Никита."
-    "Он вломился в мой \"дом\", так ещё и обижает меня. Нормальное здесь обслуживание."
-    k4 "У тебя 5 минут чтоб собраться и идём на линейку. "
-    dn "Ага, только вот нет ничего важнее моего сна."
-    "Кулич пожал плечами."
-    k4 "Мне индифферентно. Пионер не должен нарушать распорядок дня."
-    dn "Ты чё, умный?"
-    k4 "Порядочный."
-    "Никита улыбнулся."
-    scene melnik_house_inside_day with dissolve
-    show k4 normal pioneer with dspr
-    "Я начал одеваться а затем заправлять кровать, пока «Лысая бошка» сопровождал меня строгим взглядом."
-    th "Вот же педик, так и знал что ему нравятся, когда парни работают."
-    dn "А ты можешь не смотреть?"
-    k4 "Чем быстрее ты соберёшься, тем меньше на тебя буду смотреть."
-    "Спустя 5 минут, я, уже более-менее в уме-разуме, выходил на улицу. Тут же меня похлопал кулич по плечу."
-    scene melnik_house_outside_day with dissolve
-    show k4 normal pioneer with dspr
-    k4 "Еле успел, молодец, думал дольше будешь. Вот видишь, мой способ сработал лучше некуда."
-label second_day_morning_wout_ml_nothkl_tsl:
-    stop music fadeout 0.5
-    scene bg int_house_of_un_day
-    show unblink with fade2
-    $ day_time()
-    "Я наконец проснулся, но вместо обычного пробуждения меня ждал стук в дверь, очень громкий стук в дверь."
-    play sound sfx_knock_door2
-    play music music_list["everyday_theme"] fadein 1.0
-    "Посмотрев на часы время было 07:45 или 07:55, от такого раннего пробуждение аж глаза слезились,  я едва поднялся с кровати, и поплёлся к двери под этот раздражающий стук, я не задумываясь открыл дверь и увидел силуэт лысой гниды."
-    scene bg ext_house_of_un_day with dissolve
-    show k4 normal pioneer with dspr
-    "Солнце настолько сильно обогревала Совёнок, что по ощущениям мои глаза едва не сгорели, я сделал пару шагов назад и сонными глазами посмотрел на этого ужасного, разбудившего меня человека."
-    th "Если это не кофе в постель, то я ему щас лицо сломаю."
-    dn "Ну и что тебе в такую рань надо."
-    k4 "Рань? Уже была зарядка, линейка через 10 минут."
-    dn "Ну одну линейку проспать не страшно."
-    "Я уже начал закрывать дверь, как вдруг кулич остановил её волосатой рукой."
-    k4 "Я не по этому поводу, нам с тобой надо будет серьёзно побеседовать, это нужно будет сделать на завтраке."
-    dn "А так сказать нельзя?"
-    k4 "Ты только проснулся, ничего адекватного я от тебя пока не ожидаю."
-    "Унизил меня Никита."
-    "Он вломился в мой \"дом\", так ещё и обижает меня. Нормальное здесь обслуживание."
-    k4 "У тебя 5 минут чтоб собраться и идём на линейку. "
-    dn "Ага, только вот нет ничего важнее моего сна."
-    "Кулич пожал плечами."
-    k4 "Мне индифферентно. Пионер не должен нарушать распорядок дня."
-    dn "Ты чё, умный?"
-    k4 "Порядочный."
-    "Никита улыбнулся."
-    scene bg int_house_of_un_day with dissolve
-    show k4 normal pioneer with dspr
-    "Я начал одеваться а затем заправлять кровать, пока «Лысая бошка» сопровождал меня строгим взглядом."
-    th "Вот же педик, так и знал что ему нравятся, когда парни работают."
-    dn "А ты можешь не смотреть?"
-    k4 "Чем быстрее ты соберёшься, тем меньше на тебя буду смотреть."
-    "Спустя 5 минут, я, уже более-менее в уме-разуме, выходил на улицу. Тут же меня похлопал кулич по плечу."
-    scene bg ext_house_of_un_day with dissolve
-    show k4 normal pioneer with dspr
-    k4 "Еле успел, молодец, думал дольше будешь. Вот видишь, мой способ сработал лучше некуда."
-
-label second_day_morning_nothkl_tsl:
-    dn "Ага, не буду спорить идём на линейку."
-    k4 "Ха-ха, ты не в ту сторону идёшь, просыпайся наконец."
-    "Он дёрнул меня за плечо и чуть ли не потянул за собой, к этому времени я наконец то перестал щуриться, мои глаза адаптировались к солнечному свету."
-    scene bg ext_houses_day with dissolve
-    show k4 normal pioneer with dspr
-    "Мы шли в сторону площади, где стаял памятник «Аслану Тагировичу» легендарное произведение искусства."
-    scene bg ext_square_day with dissolve
-    show k4 normal pioneer with dspr
-    k4 "Вот наш отряд, идём к ним, ты просто стой рядом и не мешай и ещё, слушай вожатую."
-    "И вот мы подошли к нашей банде. Вожатая посмотрела на меня с презрением и сказала."
-    hide k4
-    show mt angry panama pioneer with dissolve
-    mt "Денис, где ты был всё это время? Пионер всегда должен приходить на зарядку."
-    dn "Да, что-то сны хорошие снились, в общем, извините."
-    mt "А сейчас, быстро в строй и чтоб больше такого не повторялось!"
-    show us smile pioneer at left with dspr
-    show ml normal pioneer su at right with dspr
-    show dv smile pioneer at fleft with dspr
-    show k4 normal pioneer at fright with dspr
-    hide mt dspr
-    show mt smile panama pioneer at center with dspr
-    "Дальше, вожатая говорила нам про план на сегодня, а так же рассказала что я новичок, меня надо уважать \"и бояться\" и всё тому подобное, ну а затем сказала следующее:"
-    mt "Как вам известно, каждое утро кто то поднимает флаг, так давайте предоставим эту честь Денису, всё же он должен почувствовать себя настоящим образцовым пионером."
-    "Тут же шёпотом, кулич задал мне следующий вопрос."
-    k4 "Может уступишь мне?"
-    dn "Нет уж, всё таки меня вызвали, отказывать не вариант."
-    k4 "Ну смотри, не справишься, все будут хохотать."
-    mt "Денис, вперёд."
-    stop music fadeout 0.5
-    play music music_list["gentle_predator"] fadein 0.5
-    play sound_loop flag_sfx fadein 1.0
-    "Я медленно подошёл и начал крутить что-то типо рычага, с хрустом флаг начал подниматься."
-    "Чем выше он был, тем труднее было крутить вентель."
-    stop sound_loop fadeout 0.5
-    play sound flag_sound_upped fadein 0.1
-    stop music fadeout 0.5
-    play music music_list["everyday_theme"] fadein 0.5
-    "И вот, когда я уже намеревался перестать калечить руки, раздался финальный щелчок, флаг был поднят."
-    "Конечно эмоции были не самые уж сильные, но всё же чувство эйфории присутствовало."
-    "Я всегда стараюсь быть подальше от центра внимания, тем более, когда на тебя смотрят СТОЛЬКО людей."
-    hide k4 dissolve
-    hide dv dissolve
-    hide us dissolve
-    hide ml dissolve
-    "После Ольга Дмитриевна подозвала меня к себе. Все ребята уже разошлись."
-    "Я подошёл."
-    mt "Ну как, проникся в атмосферу пионер-лагеря?"
-    dn "Ага, только вот подъём настолько рано, что проснуться невозможно."
-    mt "Разве 7:30 это рано? А как ты в школу встаёшь."
-    dn "Ну, школа не летом, а летом я обычно отдыхаю."
-    mt "У нас тоже отдых, только очень активный. Значит так, я тебя не для этого позвала. Мы сегодня идём в поход, с ночёвкой."
-    dn "С ночёвкой? В лесу?"
-    mt "Да, так что тебе надо будет взять себе спальный мешок на складе, не на траве же спать."
-    th "Почему бы и нет?"
-    "Подумал я."
-    dn "Это конечно хорошо, но я не знаю где склад."
-    mt "Я тоже не знаю, а пока что иди в столовую, пионер всегда должен быть сытым."
-    scene bg ext_dinning_hall_away_day with dissolve
-    "Я направился в столовую, конечно, хотелось пойти туда с кем-то, но вожатая меня задержала. Неожиданно ко мне подошёл кулич." 
-    show k4 normal pioneer with dissolve
-    k4 "Так-так-так, отпустили тебя наконец."
-    dn "Ага, тебя минуты 2 назад отпустили, чего не ешь."
-    k4 "Чего? У нас с тобой важный разговор если ты не помнишь."
-    dn "Настолько важный, что ты меня ждёшь, я бы по-любому есть пошёл, никуда бы не убежал."
-    k4 "А вдруг, ты меня боишься?"
-    "Ухмыльнулся Никита."
-    dn "Лучше перестань шутить, жизнь длинная; никогда не поздно завязать."
-    scene bg ext_dinning_hall_near_day with dissolve
-    show k4 normal pioneer with dissolve
-    "Оставшуюся минуту пути мы прошли в тишине, видимо куличу даже нечем ответить, уверен в моём мире он бы уже начал спорить."
-    scene bg int_dinning_hall_day with dissolve
-    stop ambience fadeout 0.5
-    play ambience ambience_dining_hall_full fadein 0.5
-    show k4 normal pioneer with dissolve
-    k4 "Так, садишься со мной."
-    dn "Да не вопрос."
-    show us smile pioneer at right with dissolve
-    show pi at left with dissolve
-    "Мы сели за стол, то что там уже сидели Слава и Кирилл, это явно было не совпадение."
-    dn "Отчитывать меня будете?"
-    kl "Нет, говорить что друзья так не поступают."
-    dn "Я посчитал что это было правильно, Кирил мог бы сам решить свои проблемы."
-    kl "Значит смотри, Слава явно виноват, ты бы мог помочь слабому, но ты решил создать ему проблем."
-    "И вот на этом моменте мне стало стыдно, я не хотел продолжать эту дискуссию."
-    dn "Извините, был не прав, я должен был помочь."
-    k4 "Вот именно, мы со Славой уже всё порешали. Так что с этого момента живём дружно, и Денис больше не ошибайся."
-    "И ради этого лысая гнида меня разбудила? Ну хотя бы не избили меня."
-    dn "После завтрака, можете сходить со мной до склада?"
-    kl "Я конечно мог бы обидеться, но дам шанс, так что без проблем, нам самим спальники надо, только ешь быстрее мы хотим успеть занять палатку."
-    dn "А у вас ещё и палатки есть?"
-
-
-label second_day_morning_nothkl:
-    pause 2.5
-    scene bg ext_washstand_day with dissolve
-    "Я вышел из домика и спустя пять минут ходьбы был у цели."
-    scene bg ext_washstand2_day with dissolve
-    stop music fadeout 1
-    play sound sfx_water_sink_stream fadein 1
-    "Открыв воду я не задумываясь плеснул её на лицо."
-    dn "Ай..."
-    "Такой холодной воды я ещё не видел, но всё же смог умыться, хоть и не без труда, но всё прошло тихо. Неожиданно из за спины раздался голос."
-    stop sound fadeout 1
-    scene bg ext_washstand_day with dissolve
-    show us smile pioneer with dissolve
-    play music music_list["i_want_to_play"] fadein 1.0
-    ms "Разве ты не заболел?"
-    dn "Нет как видишь."
-    ms "Меня вожатая попросила тебе порцию еды сохранить."
-    dn "Ага, спасибо."
-    ms "Можешь не благодарить, я её съел."
-    "Я был не на шутку голоден, и моё лицо начало меняться прямо на глазах."
-    hide us
-    show us laugh pioneer
-    ms "Я же пошутил ха ха ха, а ты повёлся, лицо своё видел, а ты же не мог. Пойдём в столовую, покажу где твоя еда."
-    hide us
-    show us smile pioneer
-    dn "А почему это, Ольга Дмитриевна тебя поручила привести меня в столовую, а не кулича?"
-    ms "Он и так занят, правда не знаю чем."
-    "Кулич и занят, ну тут же нет кс го.  Хотя судя по всему он главный помощник вожатой. Лично я бы никогда не выбрал для себя такую роль. Хоть это и так, вряд ли у него дел по горло, чем-то не очень хорошим попахивает."
-    dn "Ладно, сейчас почищу зубы, и пойдём в столовую."
-    scene bg ext_washstand2_day with dissolve
-    stop music fadeout 1.0
-    play sound sfx_water_sink_stream fadein 1.0
-    "Я приступил к процессу, холодная вода давала о себе знать, а порошок оставлял неприятное ощущение на полости рта, благо он быстро прошло."
-    "Не сказал бы что мне понравились мои водные процедуры, но всё же терпимо, привыкнуть можно, только вот задерживаться надолго тут нельзя."
-    scene bg ext_washstand_day with dissolve
-    stop sound fadeout 1.0
-    show us smile pioneer with dissolve
-    play music music_list["everyday_theme"] fadein 1.0
-    ms "Вижу ты уже закончил ид-дём."
-    dn "Ну иди, я за тобой, но если это розыгрыш, то ты у меня ещё попляшешь."
-    ms "Да не переживай, еда есть и ты меня не напугаешь."
-    dn "Идём уже."
-    scene bg ext_houses_day with dissolve
-    show us normal pioneer with dissolve
-    "В моём мире Максим хотя бы шутки воспринимал и ещё был токсичным, оно и понятно, в этом мире он меня не знал."
-    "Хотя подозрение на то, что он решил пошутить было, но я был слишком голоден чтоб о таком думать."
-    dn "Чёрт, я забыл щётку с порошком."
-    ms "После столовой вернёмся. И ещё, мне крыс домашних купили, когда я вернусь домой, одну я назову Сашей а вторую, не знаю. Может лысиком. И ещё у меня у брата самоед есть – только он не ест никого, это собака такая."
-    dn "Я знаю, лучше расскажи где моя еда."
-    ms "Нет смысла, ты не поймёшь, она там на столе стоит."
-    dn "Ага, и что мне это дало?"
-    ms "Я о том же."
-    "По моему он сам особе не знает или не помнит, хотя если я ему об этом скажу, он точно не согласиться."
-    scene bg ext_dining_hall_away_day with dissolve
-    show us normal pioneer with dissolve
-    "Спустя ещё 2 минуты мы подошли к уже знакомому мне зданию. СТОЛОВАЯ вот она, моя цель."
-    scene bg ext_dining_hall_near_day with dissolve
-    show us normal pioneer with dissolve
-    ms "Пойдём, вот тут еда."
-    dn "Ага спасибо."
-    stop ambience fadeout 1.0
-    play ambience ambience_dining_hall_empty
-    scene bg int_dining_hall_day with dissolve
-    "Я подошёл к единственному накрытому столу, и увидил в тарелке как ни странно кашу, манную."
-    show us normal pioneer at center with dissolve
-    "Впрочем каша мне нравилась, но ел я её только дома, аж не терпелось попробовать, так скажем сравнить, так же на столе стоял стакан с какао и лежали две булки."
-    th "Чёрт даже кашу распробовать не успел"
-    "Подумал я, ну и как мне теперь сравнивать."
-    "Хотя это мелочи, главное что я сытый."
-    "Неожиданно из-за спины я услышал голос кулича."
-    show us normal pioneer at left with ease
-    show k4 normal pioneer at right with dissolve
-    k4 "Вижу ты доел."
-    dn "Ага, и пол года не прошло."
-    k4 "Ты же в курсе что сегодня после обеда поход?"
-    dn "Да, ещё не успел забыть."
-    k4 "Оно и прекрасно, ты же новенький, наверное не знаешь как это будет проходить?"
-    dn "Нет не знаю, можешь мне просто рассказать, без прилюдий."
-    k4 "Ну, значит слушай. Мы пойдём на ближайшую поляну, разведём костёр, ну и главное, мы будем там ночевать."
-    dn "Это конечно круто, ну лучше скажи где или на чём мы будем спать?"
-    k4 "Ну смотри, у нас на складе лагеря было несколько палаток и спальные мешки."
-    dn "Я так понимаю, меня до склада Максим поведёт из-за твоей занятости."
-    th "Попытался затролить я Калича."
-    k4 "Наверное, хочешь я тебе покажу куда идти и ты один сходишь? А по поводу занятости даже лучшем надо отдыхать."
-    ms "Да, я без проблем могу сходить, только наверное полатки все разобрали, их всего 3 или 4 штуки."
-    "Поход это конечно интересное событие, особенно с ночёвкой, только вот в удобстве советского спальника я сомневался, хотя, может быть одна палатка на несколько человек. Надеюсь получится к кому-то попросится."
-    ms "Мы пойдём."
-    k4 "Если уверен что справишься, то можешь сам вести Дениса."
-    ms "Ты бездельник, так что я пойду."
-    show dv normal pioneer at center with dissolve
-    "Вдруг, к нам подошёл какой-то пионер, похожий на дед-инсайда."
-    "Максим сразу же бросился к нему с обнимашками."
-    "В \"незнакомце\" я узнал Никиту Голодова."
-    ng "Привет, ты должно быть новенький. Как тебя зовут?"
-    "Я сразу же вспомнил прикол про \"тебя это не касается\", и я решил прямо так и ответить дед-инсайдику."
-    dn "Тебя это не касается."
-    th "Вот я и дебил, конечно."
-    hide dv
-    show dv sad pioneer at center
-    "На лице Никитоса я увидел грусть, похоже, что тут он еще не успел деградировать."
-    ng "А вот это, было обидно."
-    th "Вот я и козёл конечно. Похоже в этом мире, деградировать буду я, а не Голодов."
-    dn "Да ладно, Никитос. Не обижайся, это была лишь шутка."
-    "Сказал я, в попытке хотя бы как то развеселить дед-инсайдика."
-    hide dv
-    show dv smile pioneer at center
-    ng "Ну ладно, раз это была шутка, то обижаться и правда не стоит."
-    "Сработало!"
-    dn "Никита, а ты не хочешь к нам присоединиться?"
-    hide dv
-    show dv normal pioneer at center
-    ng "Не горю желанием."
-    dn "Это ясно, но всё же не думаю что вожатая хотела бы чтоб ты перекидывал свои обязанности на Максима."
-    ng "Максим этого сам хочет, к тому же это повод для него искупить вину."
-    dn "Что он хоть умудрился сделать?"
-    hide us
-    show us cry pioneer at left
-    ms "Да я это самое, ну брат уже всем рассказал, гнида."
-    "По Максиму было видно насколько он зол, а ещё что он говорит это чуть ли не через слёзы."
-    k4 "Да, там такая ситуация, он и Никита Голодов в футбол гоняли, и Макс разбил окно в медпункт, случайно. Ну мяч пнул, сам понимаешь."
-    ms "Ага, и этот п-придурок, сказал что я специально, он так пошутить хотел, меня д-домой хотят отправить, а я не хочу."
-    dn "Ситуация конечно у тебя трудная, но неужели Кулич не может просто так помочь?"
-    k4 "Я конечно могу, но всё же услуга за услугу, к тому же я вожатой приведу в пример что Макс мне помогал."
-    ms "Денис, пожалуйста, з-заступись тоже за меня, я не хочу домой."
-    k4 "Максим, ты мужик, давай слёзки вытирай, я уже говорил, что всё будет хорошо."
-    ms "Аг-а."
-    "Конечно и в нашем мире Никита был ужасным человеком, и в принципе я ожидал что он и тут будет вести себя так же плохо. Но не настолько, судя по тому что мне рассказал я должен, точнее нет, обязан помочь максиму, ну это я оставлю на потом, мне ещё к походу готовиться."
-    ms "Денис, ну ты заступишься?"
-    dn "Без проблем, тут и думать нечего."
-    show us smile pioneer with dspr
-    ms "С-спасибо ог-ромное."
-    dn "Не за что, пойдём уже за спальником."
-    ms "Ага, пойдём. И еще раз спасибо."
-    scene bg ext_dinning_hall_away_day with dissolve
-    show us smile pioneer with dspr
-    "Максим успокоился, как будто после этих слов ему стало в разы легче, лёгким движением руки он смахнул слёзы с глаз и пошёл на улицу."
-    scene bg ext_loot_room_day with dissolve
-    show us smile pioneer with dspr
-    "Ну а затем в сторону склада, это было небольшое здание, наполовину деревянное, всё оно было разрисована различными граффити, видимо это творчество пионеров."
-    "И нарисованы они были действительно красиво."
-    "Максим распахнул большую, деревянную дверь, после чего зашёл в здание, ну а я последовал за ним, к слову, внутри здание было уютние."
-    "Хотя звук во время того как я наступал на деревянный пол, он весьма раздражал, хотя буквально спустя 10 секунд я привык."
-    ms "Мы на складе, а теперь пошли туда."
-    "Максим показал пальцем на дальнюю полку, в правом углу здание. Сделав десяток шагов мы были на месте."
-    ms "Вот, как и ожидалось, палаток уже нету, хорошо что я успел место занять."
-    dn "Мне тут стало интересно, а сколько мест в палатке?"
-    ms "Ну смотри, 2 на 4 человека, а 2 оставшиеся на 3."
-    "Конечно очень вероятно что места в палатке мне не достанется, но попробовать стоило."
-    k4 "Я с куличом, у нас кстати есть место хочешь?"
-    dn "Серьёзно, спасибо, конечно хочу."
-    "Это оказалось куда легче чем я думал. Даже не пришлось кого-то спрашивать."
-    ms "Ну ты спальник -та возьми."
-    "Я выбрал как мне показалось самый уютный спальник из оставшихся."
-    ms "Хороший выбор."
-    dn "Никак иначе, глаз у меня натренирован."
-    "После, я взял спальник в руки и мы пошли в сторону столовой."
-    ms "Сейчас спросим что кулич думает по поводу жизни с тобой, но думаю он не против."
-    dn "Будем надеяться."
-    "Спустя пару минут мы пришли, кулич сидел на том же месте."
-    dn "Не уже ли ты нас ждал."
-    k4 "Не вижу в этом ни чего зазорного."
-    ms "Можно Денис будет с нами жить?"
-    k4 "А как ты думаешь, зачем я одно место оставлял, дадим новичку шанс увидеть насколько может быть хорошо в этом пионер-лагере."
-    dn "Ну спасибо."
-    k4 "Не стоит благодарности. А пока что выложи спальник дома, поход только через 3 часа."
-    dn "Ага, сейчас положу, и в самом деле зачем мне с ним повсюду таскаться?"
-    "С насмешкой сказал я и пошёл к домики, проводник в виде Максима остался с куличом."
-    "..."
-
-    return
