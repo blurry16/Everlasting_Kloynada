@@ -1,4 +1,4 @@
-init:
+init 1:
 
     # Dev mode 
     $ config.developer = True # False
@@ -41,22 +41,13 @@ init:
     image cg psglgdhavelostbw = "mods/Everlasting_Kloynada/materials/images/PSGLGDhavelostBW.jpg"
     image bg ext_loot_room_day = "mods/Everlating_Kloynada/materials/images/ext_loot_room_day.jpg"
 
-    $ NOTHING_PATH = "mods/Everlasting_Kloynada/nothing.png"
+    $ NOTHING_PATH = "mods/Everlasting_Kloynada/materials/nothing.png"
 
     # holy fuck
-    image ml normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer.png', (0, 0), NOTHING_PATH)
-    )
-    image ml normal pioneer su = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer_su.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer_su.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer_su.png', (0, 0), NOTHING_PATH)
-    )
-    
-    image k4 normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/k4_normal_pioneer.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/k4_normal_pioneer.png',
-        (0, 0), NOTHING_PATH), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), 'mods/Everlasting_Kloynada/materials/sprites/k4_normal_pioneer.png', (0, 0), NOTHING_PATH)
-    )
+    image ml normal pioneer = initsprite("mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer.png")
+    image ml normal pioneer su = initsprite("mods/Everlasting_Kloynada/materials/sprites/ml_normal_pioneer_su.png")
+
+    image k4 normal pioneer = initsprite("mods/Everlasting_Kloynada/materials/sprites/k4_normal_pioneer.png")
     
     # Custom Music
     $ lvvp = "mods/Everlasting_Kloynada/materials/music/neksyusha1.mp3"
@@ -88,6 +79,15 @@ init:
 
 init 0 python:
     from os import path
+
+
+    def initsprite(sprite_path):
+        global NOTHING_PATH
+        return ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), sprite_path,
+            (0, 0), NOTHING_PATH), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), sprite_path,
+            (0, 0), NOTHING_PATH), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), sprite_path, (0, 0), NOTHING_PATH)
+        )
+
 
     MOD_ID = "kloynada_prolog_start"
     MOD_NAME = "Бесконечная Клоунада"
